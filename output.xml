@@ -1,0 +1,3830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.11.0 on win32)" generated="20230503 22:47:19.526" rpa="false">
+<suite id="s1" name="Kineti Assesement" source="C:\Users\simra\Desktop\Kineti_Assesement">
+<suite id="s1-s1" name="Test" source="C:\Users\simra\Desktop\Kineti_Assesement\Test">
+<suite id="s1-s1-s1" name="Different Items" source="C:\Users\simra\Desktop\Kineti_Assesement\Test\different_items.robot">
+<test id="s1-s1-s1-t1" name="SampleDataTable">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://contextures.com/xlsampledata01.html#data</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20230503 22:47:19.818" level="INFO">Opening browser 'chrome' to base url 'https://contextures.com/xlsampledata01.html#data'.</msg>
+<status status="PASS" starttime="20230503 22:47:19.818" endtime="20230503 22:47:23.549"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230503 22:47:23.550" endtime="20230503 22:47:23.680"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230503 22:47:25.681" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230503 22:47:23.680" endtime="20230503 22:47:25.681"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath://div[1]/table[14]/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${number_of_rows}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.709" level="INFO">${number_of_rows} = 44</msg>
+<status status="PASS" starttime="20230503 22:47:25.681" endtime="20230503 22:47:25.709"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${number_of_rows}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.709" endtime="20230503 22:47:25.710"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[1]/td[1]</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.710" endtime="20230503 22:47:25.725"></status>
+</kw>
+<kw name="${INDEX} IN RANGE [ 2 | ${number_of_rows+1} ]" type="for">
+<kw name="${INDEX} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.757" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:25.726" endtime="20230503 22:47:25.757"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.758" endtime="20230503 22:47:25.758"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.758" endtime="20230503 22:47:25.759"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.726" endtime="20230503 22:47:25.759"></status>
+</kw>
+<kw name="${INDEX} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.788" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:25.759" endtime="20230503 22:47:25.788"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.789" endtime="20230503 22:47:25.789"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.789" endtime="20230503 22:47:25.791"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.759" endtime="20230503 22:47:25.791"></status>
+</kw>
+<kw name="${INDEX} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.817" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:25.791" endtime="20230503 22:47:25.817"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.818" endtime="20230503 22:47:25.818"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.818" endtime="20230503 22:47:25.819"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.791" endtime="20230503 22:47:25.819"></status>
+</kw>
+<kw name="${INDEX} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.848" level="INFO">${items_in_table} = Pen</msg>
+<status status="PASS" starttime="20230503 22:47:25.820" endtime="20230503 22:47:25.848"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.849" endtime="20230503 22:47:25.849"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.849" endtime="20230503 22:47:25.850"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.819" endtime="20230503 22:47:25.850"></status>
+</kw>
+<kw name="${INDEX} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.880" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:25.851" endtime="20230503 22:47:25.880"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.881" endtime="20230503 22:47:25.881"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.881" endtime="20230503 22:47:25.882"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.851" endtime="20230503 22:47:25.882"></status>
+</kw>
+<kw name="${INDEX} = 7" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.911" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:25.882" endtime="20230503 22:47:25.912"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.912" endtime="20230503 22:47:25.914"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.914" endtime="20230503 22:47:25.916"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.882" endtime="20230503 22:47:25.916"></status>
+</kw>
+<kw name="${INDEX} = 8" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.945" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:25.917" endtime="20230503 22:47:25.945"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.945" endtime="20230503 22:47:25.946"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.946" endtime="20230503 22:47:25.946"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.917" endtime="20230503 22:47:25.946"></status>
+</kw>
+<kw name="${INDEX} = 9" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:25.973" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:25.946" endtime="20230503 22:47:25.975"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.975" endtime="20230503 22:47:25.976"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:25.976" endtime="20230503 22:47:25.977"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.946" endtime="20230503 22:47:25.977"></status>
+</kw>
+<kw name="${INDEX} = 10" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.004" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:25.977" endtime="20230503 22:47:26.004"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.004" endtime="20230503 22:47:26.005"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.005" endtime="20230503 22:47:26.005"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.977" endtime="20230503 22:47:26.005"></status>
+</kw>
+<kw name="${INDEX} = 11" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.030" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.006" endtime="20230503 22:47:26.031"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.031" endtime="20230503 22:47:26.031"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.032" endtime="20230503 22:47:26.032"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.006" endtime="20230503 22:47:26.032"></status>
+</kw>
+<kw name="${INDEX} = 12" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.062" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.032" endtime="20230503 22:47:26.062"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.062" endtime="20230503 22:47:26.062"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.063" endtime="20230503 22:47:26.063"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.032" endtime="20230503 22:47:26.063"></status>
+</kw>
+<kw name="${INDEX} = 13" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.090" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.064" endtime="20230503 22:47:26.090"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.091" endtime="20230503 22:47:26.091"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.091" endtime="20230503 22:47:26.093"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.064" endtime="20230503 22:47:26.093"></status>
+</kw>
+<kw name="${INDEX} = 14" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.120" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.093" endtime="20230503 22:47:26.120"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.120" endtime="20230503 22:47:26.121"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.121" endtime="20230503 22:47:26.121"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.093" endtime="20230503 22:47:26.121"></status>
+</kw>
+<kw name="${INDEX} = 15" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.151" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.121" endtime="20230503 22:47:26.151"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.151" endtime="20230503 22:47:26.152"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.152" endtime="20230503 22:47:26.152"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.121" endtime="20230503 22:47:26.152"></status>
+</kw>
+<kw name="${INDEX} = 16" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.180" level="INFO">${items_in_table} = Desk</msg>
+<status status="PASS" starttime="20230503 22:47:26.152" endtime="20230503 22:47:26.180"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.181" endtime="20230503 22:47:26.181"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.181" endtime="20230503 22:47:26.182"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.152" endtime="20230503 22:47:26.182"></status>
+</kw>
+<kw name="${INDEX} = 17" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.206" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.182" endtime="20230503 22:47:26.208"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.208" endtime="20230503 22:47:26.208"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.208" endtime="20230503 22:47:26.209"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.182" endtime="20230503 22:47:26.209"></status>
+</kw>
+<kw name="${INDEX} = 18" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.236" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.210" endtime="20230503 22:47:26.236"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.236" endtime="20230503 22:47:26.237"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.237" endtime="20230503 22:47:26.237"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.209" endtime="20230503 22:47:26.238"></status>
+</kw>
+<kw name="${INDEX} = 19" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.266" level="INFO">${items_in_table} = Pen</msg>
+<status status="PASS" starttime="20230503 22:47:26.238" endtime="20230503 22:47:26.266"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.266" endtime="20230503 22:47:26.268"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.268" endtime="20230503 22:47:26.269"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.238" endtime="20230503 22:47:26.269"></status>
+</kw>
+<kw name="${INDEX} = 20" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.298" level="INFO">${items_in_table} = Pen</msg>
+<status status="PASS" starttime="20230503 22:47:26.269" endtime="20230503 22:47:26.298"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.298" endtime="20230503 22:47:26.298"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.298" endtime="20230503 22:47:26.299"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.269" endtime="20230503 22:47:26.299"></status>
+</kw>
+<kw name="${INDEX} = 21" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.327" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.299" endtime="20230503 22:47:26.327"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.328" endtime="20230503 22:47:26.328"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.328" endtime="20230503 22:47:26.329"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.299" endtime="20230503 22:47:26.329"></status>
+</kw>
+<kw name="${INDEX} = 22" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.362" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.329" endtime="20230503 22:47:26.363"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.363" endtime="20230503 22:47:26.363"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.363" endtime="20230503 22:47:26.365"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.329" endtime="20230503 22:47:26.365"></status>
+</kw>
+<kw name="${INDEX} = 23" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.394" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.365" endtime="20230503 22:47:26.394"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.395" endtime="20230503 22:47:26.395"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.395" endtime="20230503 22:47:26.396"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.365" endtime="20230503 22:47:26.396"></status>
+</kw>
+<kw name="${INDEX} = 24" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.423" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.396" endtime="20230503 22:47:26.424"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.424" endtime="20230503 22:47:26.424"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.424" endtime="20230503 22:47:26.426"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.396" endtime="20230503 22:47:26.426"></status>
+</kw>
+<kw name="${INDEX} = 25" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.455" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.426" endtime="20230503 22:47:26.456"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.456" endtime="20230503 22:47:26.456"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.456" endtime="20230503 22:47:26.457"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.426" endtime="20230503 22:47:26.457"></status>
+</kw>
+<kw name="${INDEX} = 26" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.484" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.457" endtime="20230503 22:47:26.484"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.484" endtime="20230503 22:47:26.484"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.484" endtime="20230503 22:47:26.486"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.457" endtime="20230503 22:47:26.486"></status>
+</kw>
+<kw name="${INDEX} = 27" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.515" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.486" endtime="20230503 22:47:26.515"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.516" endtime="20230503 22:47:26.516"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.516" endtime="20230503 22:47:26.517"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.486" endtime="20230503 22:47:26.517"></status>
+</kw>
+<kw name="${INDEX} = 28" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.551" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.517" endtime="20230503 22:47:26.551"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.552" endtime="20230503 22:47:26.552"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.552" endtime="20230503 22:47:26.553"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.517" endtime="20230503 22:47:26.553"></status>
+</kw>
+<kw name="${INDEX} = 29" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.586" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.554" endtime="20230503 22:47:26.586"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.587" endtime="20230503 22:47:26.587"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.587" endtime="20230503 22:47:26.588"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.554" endtime="20230503 22:47:26.588"></status>
+</kw>
+<kw name="${INDEX} = 30" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.619" level="INFO">${items_in_table} = Pen</msg>
+<status status="PASS" starttime="20230503 22:47:26.588" endtime="20230503 22:47:26.620"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.620" endtime="20230503 22:47:26.620"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.620" endtime="20230503 22:47:26.620"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.588" endtime="20230503 22:47:26.622"></status>
+</kw>
+<kw name="${INDEX} = 31" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.648" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.622" endtime="20230503 22:47:26.648"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.649" endtime="20230503 22:47:26.649"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.649" endtime="20230503 22:47:26.649"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.622" endtime="20230503 22:47:26.649"></status>
+</kw>
+<kw name="${INDEX} = 32" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.678" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.651" endtime="20230503 22:47:26.679"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.679" endtime="20230503 22:47:26.679"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.679" endtime="20230503 22:47:26.680"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.649" endtime="20230503 22:47:26.680"></status>
+</kw>
+<kw name="${INDEX} = 33" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.708" level="INFO">${items_in_table} = Desk</msg>
+<status status="PASS" starttime="20230503 22:47:26.680" endtime="20230503 22:47:26.708"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.708" endtime="20230503 22:47:26.708"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.709" endtime="20230503 22:47:26.709"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.680" endtime="20230503 22:47:26.709"></status>
+</kw>
+<kw name="${INDEX} = 34" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.737" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.709" endtime="20230503 22:47:26.738"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.738" endtime="20230503 22:47:26.738"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.738" endtime="20230503 22:47:26.739"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.709" endtime="20230503 22:47:26.739"></status>
+</kw>
+<kw name="${INDEX} = 35" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.768" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.740" endtime="20230503 22:47:26.768"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.768" endtime="20230503 22:47:26.768"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.769" endtime="20230503 22:47:26.769"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.740" endtime="20230503 22:47:26.769"></status>
+</kw>
+<kw name="${INDEX} = 36" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.799" level="INFO">${items_in_table} = Pen Set</msg>
+<status status="PASS" starttime="20230503 22:47:26.770" endtime="20230503 22:47:26.799"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.799" endtime="20230503 22:47:26.800"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.800" endtime="20230503 22:47:26.800"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.770" endtime="20230503 22:47:26.800"></status>
+</kw>
+<kw name="${INDEX} = 37" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.827" level="INFO">${items_in_table} = Desk</msg>
+<status status="PASS" starttime="20230503 22:47:26.801" endtime="20230503 22:47:26.827"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.827" endtime="20230503 22:47:26.827"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.828" endtime="20230503 22:47:26.828"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.800" endtime="20230503 22:47:26.828"></status>
+</kw>
+<kw name="${INDEX} = 38" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.856" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.828" endtime="20230503 22:47:26.856"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.856" endtime="20230503 22:47:26.857"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.857" endtime="20230503 22:47:26.857"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.828" endtime="20230503 22:47:26.857"></status>
+</kw>
+<kw name="${INDEX} = 39" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.885" level="INFO">${items_in_table} = Pen</msg>
+<status status="PASS" starttime="20230503 22:47:26.857" endtime="20230503 22:47:26.886"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.886" endtime="20230503 22:47:26.886"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.887" endtime="20230503 22:47:26.887"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.857" endtime="20230503 22:47:26.887"></status>
+</kw>
+<kw name="${INDEX} = 40" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.916" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.888" endtime="20230503 22:47:26.916"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.917" endtime="20230503 22:47:26.917"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.917" endtime="20230503 22:47:26.917"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.887" endtime="20230503 22:47:26.917"></status>
+</kw>
+<kw name="${INDEX} = 41" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.948" level="INFO">${items_in_table} = Pencil</msg>
+<status status="PASS" starttime="20230503 22:47:26.918" endtime="20230503 22:47:26.948"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.948" endtime="20230503 22:47:26.948"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.948" endtime="20230503 22:47:26.949"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.918" endtime="20230503 22:47:26.949"></status>
+</kw>
+<kw name="${INDEX} = 42" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:26.978" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.949" endtime="20230503 22:47:26.979"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.979" endtime="20230503 22:47:26.979"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:26.980" endtime="20230503 22:47:26.980"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.949" endtime="20230503 22:47:26.980"></status>
+</kw>
+<kw name="${INDEX} = 43" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.011" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:26.981" endtime="20230503 22:47:27.011"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.011" endtime="20230503 22:47:27.011"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.012" endtime="20230503 22:47:27.012"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:26.980" endtime="20230503 22:47:27.012"></status>
+</kw>
+<kw name="${INDEX} = 44" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[4]</arg>
+</arguments>
+<assign>
+<var>${items_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.041" level="INFO">${items_in_table} = Binder</msg>
+<status status="PASS" starttime="20230503 22:47:27.013" endtime="20230503 22:47:27.041"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+<arg>${items_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.042" endtime="20230503 22:47:27.042"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ITEMS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.042" endtime="20230503 22:47:27.043"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.012" endtime="20230503 22:47:27.043"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:25.725" endtime="20230503 22:47:27.043"></status>
+</kw>
+<kw name="${INDEX} IN RANGE [ 2 | ${number_of_rows+1} ]" type="for">
+<kw name="${INDEX} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.073" level="INFO">${units_in_table} = 95</msg>
+<status status="PASS" starttime="20230503 22:47:27.043" endtime="20230503 22:47:27.073"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.073" endtime="20230503 22:47:27.073"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.073" endtime="20230503 22:47:27.074"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.043" endtime="20230503 22:47:27.074"></status>
+</kw>
+<kw name="${INDEX} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.101" level="INFO">${units_in_table} = 50</msg>
+<status status="PASS" starttime="20230503 22:47:27.074" endtime="20230503 22:47:27.101"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.101" endtime="20230503 22:47:27.101"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.102" endtime="20230503 22:47:27.102"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.074" endtime="20230503 22:47:27.102"></status>
+</kw>
+<kw name="${INDEX} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.131" level="INFO">${units_in_table} = 36</msg>
+<status status="PASS" starttime="20230503 22:47:27.102" endtime="20230503 22:47:27.132"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.132" endtime="20230503 22:47:27.132"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.134" endtime="20230503 22:47:27.134"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.102" endtime="20230503 22:47:27.134"></status>
+</kw>
+<kw name="${INDEX} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.164" level="INFO">${units_in_table} = 27</msg>
+<status status="PASS" starttime="20230503 22:47:27.135" endtime="20230503 22:47:27.164"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.164" endtime="20230503 22:47:27.165"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.165" endtime="20230503 22:47:27.165"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.135" endtime="20230503 22:47:27.165"></status>
+</kw>
+<kw name="${INDEX} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.195" level="INFO">${units_in_table} = 56</msg>
+<status status="PASS" starttime="20230503 22:47:27.167" endtime="20230503 22:47:27.195"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.197" endtime="20230503 22:47:27.197"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.197" endtime="20230503 22:47:27.198"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.165" endtime="20230503 22:47:27.198"></status>
+</kw>
+<kw name="${INDEX} = 7" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.224" level="INFO">${units_in_table} = 60</msg>
+<status status="PASS" starttime="20230503 22:47:27.198" endtime="20230503 22:47:27.224"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.224" endtime="20230503 22:47:27.224"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.225" endtime="20230503 22:47:27.225"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.198" endtime="20230503 22:47:27.225"></status>
+</kw>
+<kw name="${INDEX} = 8" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.255" level="INFO">${units_in_table} = 75</msg>
+<status status="PASS" starttime="20230503 22:47:27.225" endtime="20230503 22:47:27.255"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.256" endtime="20230503 22:47:27.256"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.258" endtime="20230503 22:47:27.258"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.225" endtime="20230503 22:47:27.259"></status>
+</kw>
+<kw name="${INDEX} = 9" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.286" level="INFO">${units_in_table} = 90</msg>
+<status status="PASS" starttime="20230503 22:47:27.259" endtime="20230503 22:47:27.286"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.286" endtime="20230503 22:47:27.286"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.287" endtime="20230503 22:47:27.287"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.259" endtime="20230503 22:47:27.288"></status>
+</kw>
+<kw name="${INDEX} = 10" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.321" level="INFO">${units_in_table} = 32</msg>
+<status status="PASS" starttime="20230503 22:47:27.288" endtime="20230503 22:47:27.321"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.322" endtime="20230503 22:47:27.322"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.322" endtime="20230503 22:47:27.322"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.288" endtime="20230503 22:47:27.323"></status>
+</kw>
+<kw name="${INDEX} = 11" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.353" level="INFO">${units_in_table} = 60</msg>
+<status status="PASS" starttime="20230503 22:47:27.323" endtime="20230503 22:47:27.354"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.354" endtime="20230503 22:47:27.355"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.355" endtime="20230503 22:47:27.356"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.323" endtime="20230503 22:47:27.356"></status>
+</kw>
+<kw name="${INDEX} = 12" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.390" level="INFO">${units_in_table} = 90</msg>
+<status status="PASS" starttime="20230503 22:47:27.357" endtime="20230503 22:47:27.390"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.390" endtime="20230503 22:47:27.391"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.391" endtime="20230503 22:47:27.392"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.356" endtime="20230503 22:47:27.392"></status>
+</kw>
+<kw name="${INDEX} = 13" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.422" level="INFO">${units_in_table} = 29</msg>
+<status status="PASS" starttime="20230503 22:47:27.392" endtime="20230503 22:47:27.422"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.422" endtime="20230503 22:47:27.423"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.423" endtime="20230503 22:47:27.423"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.392" endtime="20230503 22:47:27.423"></status>
+</kw>
+<kw name="${INDEX} = 14" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.452" level="INFO">${units_in_table} = 81</msg>
+<status status="PASS" starttime="20230503 22:47:27.425" endtime="20230503 22:47:27.452"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.452" endtime="20230503 22:47:27.452"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.453" endtime="20230503 22:47:27.453"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.425" endtime="20230503 22:47:27.453"></status>
+</kw>
+<kw name="${INDEX} = 15" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.483" level="INFO">${units_in_table} = 35</msg>
+<status status="PASS" starttime="20230503 22:47:27.453" endtime="20230503 22:47:27.483"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.483" endtime="20230503 22:47:27.485"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.485" endtime="20230503 22:47:27.485"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.453" endtime="20230503 22:47:27.485"></status>
+</kw>
+<kw name="${INDEX} = 16" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.514" level="INFO">${units_in_table} = 2</msg>
+<status status="PASS" starttime="20230503 22:47:27.486" endtime="20230503 22:47:27.514"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.515" endtime="20230503 22:47:27.515"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.515" endtime="20230503 22:47:27.516"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.486" endtime="20230503 22:47:27.516"></status>
+</kw>
+<kw name="${INDEX} = 17" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.547" level="INFO">${units_in_table} = 16</msg>
+<status status="PASS" starttime="20230503 22:47:27.518" endtime="20230503 22:47:27.548"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.548" endtime="20230503 22:47:27.548"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.548" endtime="20230503 22:47:27.549"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.516" endtime="20230503 22:47:27.549"></status>
+</kw>
+<kw name="${INDEX} = 18" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.583" level="INFO">${units_in_table} = 28</msg>
+<status status="PASS" starttime="20230503 22:47:27.550" endtime="20230503 22:47:27.583"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.583" endtime="20230503 22:47:27.584"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.584" endtime="20230503 22:47:27.584"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.550" endtime="20230503 22:47:27.585"></status>
+</kw>
+<kw name="${INDEX} = 19" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.621" level="INFO">${units_in_table} = 64</msg>
+<status status="PASS" starttime="20230503 22:47:27.585" endtime="20230503 22:47:27.621"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.621" endtime="20230503 22:47:27.621"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.622" endtime="20230503 22:47:27.622"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.585" endtime="20230503 22:47:27.622"></status>
+</kw>
+<kw name="${INDEX} = 20" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.654" level="INFO">${units_in_table} = 15</msg>
+<status status="PASS" starttime="20230503 22:47:27.622" endtime="20230503 22:47:27.654"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.655" endtime="20230503 22:47:27.655"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.655" endtime="20230503 22:47:27.656"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.622" endtime="20230503 22:47:27.656"></status>
+</kw>
+<kw name="${INDEX} = 21" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.687" level="INFO">${units_in_table} = 96</msg>
+<status status="PASS" starttime="20230503 22:47:27.656" endtime="20230503 22:47:27.687"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.687" endtime="20230503 22:47:27.688"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.688" endtime="20230503 22:47:27.689"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.656" endtime="20230503 22:47:27.689"></status>
+</kw>
+<kw name="${INDEX} = 22" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.718" level="INFO">${units_in_table} = 67</msg>
+<status status="PASS" starttime="20230503 22:47:27.689" endtime="20230503 22:47:27.718"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.718" endtime="20230503 22:47:27.719"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.719" endtime="20230503 22:47:27.720"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.689" endtime="20230503 22:47:27.720"></status>
+</kw>
+<kw name="${INDEX} = 23" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.752" level="INFO">${units_in_table} = 74</msg>
+<status status="PASS" starttime="20230503 22:47:27.720" endtime="20230503 22:47:27.752"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.752" endtime="20230503 22:47:27.752"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.752" endtime="20230503 22:47:27.754"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.720" endtime="20230503 22:47:27.755"></status>
+</kw>
+<kw name="${INDEX} = 24" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.783" level="INFO">${units_in_table} = 46</msg>
+<status status="PASS" starttime="20230503 22:47:27.755" endtime="20230503 22:47:27.783"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.784" endtime="20230503 22:47:27.784"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.784" endtime="20230503 22:47:27.786"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.755" endtime="20230503 22:47:27.786"></status>
+</kw>
+<kw name="${INDEX} = 25" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.816" level="INFO">${units_in_table} = 87</msg>
+<status status="PASS" starttime="20230503 22:47:27.787" endtime="20230503 22:47:27.816"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.816" endtime="20230503 22:47:27.817"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.817" endtime="20230503 22:47:27.817"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.786" endtime="20230503 22:47:27.818"></status>
+</kw>
+<kw name="${INDEX} = 26" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.849" level="INFO">${units_in_table} = 4</msg>
+<status status="PASS" starttime="20230503 22:47:27.818" endtime="20230503 22:47:27.850"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.850" endtime="20230503 22:47:27.850"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.850" endtime="20230503 22:47:27.850"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.818" endtime="20230503 22:47:27.850"></status>
+</kw>
+<kw name="${INDEX} = 27" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.880" level="INFO">${units_in_table} = 7</msg>
+<status status="PASS" starttime="20230503 22:47:27.851" endtime="20230503 22:47:27.881"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.881" endtime="20230503 22:47:27.882"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.882" endtime="20230503 22:47:27.883"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.851" endtime="20230503 22:47:27.883"></status>
+</kw>
+<kw name="${INDEX} = 28" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.918" level="INFO">${units_in_table} = 50</msg>
+<status status="PASS" starttime="20230503 22:47:27.884" endtime="20230503 22:47:27.918"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.918" endtime="20230503 22:47:27.919"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.919" endtime="20230503 22:47:27.920"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.884" endtime="20230503 22:47:27.920"></status>
+</kw>
+<kw name="${INDEX} = 29" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.951" level="INFO">${units_in_table} = 66</msg>
+<status status="PASS" starttime="20230503 22:47:27.921" endtime="20230503 22:47:27.952"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.952" endtime="20230503 22:47:27.953"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.953" endtime="20230503 22:47:27.954"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.920" endtime="20230503 22:47:27.954"></status>
+</kw>
+<kw name="${INDEX} = 30" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:27.984" level="INFO">${units_in_table} = 96</msg>
+<status status="PASS" starttime="20230503 22:47:27.955" endtime="20230503 22:47:27.984"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.984" endtime="20230503 22:47:27.985"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:27.985" endtime="20230503 22:47:27.985"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.955" endtime="20230503 22:47:27.985"></status>
+</kw>
+<kw name="${INDEX} = 31" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.020" level="INFO">${units_in_table} = 53</msg>
+<status status="PASS" starttime="20230503 22:47:27.986" endtime="20230503 22:47:28.021"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.021" endtime="20230503 22:47:28.022"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.022" endtime="20230503 22:47:28.022"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.985" endtime="20230503 22:47:28.022"></status>
+</kw>
+<kw name="${INDEX} = 32" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.057" level="INFO">${units_in_table} = 80</msg>
+<status status="PASS" starttime="20230503 22:47:28.022" endtime="20230503 22:47:28.057"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.057" endtime="20230503 22:47:28.058"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.058" endtime="20230503 22:47:28.058"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.022" endtime="20230503 22:47:28.060"></status>
+</kw>
+<kw name="${INDEX} = 33" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.095" level="INFO">${units_in_table} = 5</msg>
+<status status="PASS" starttime="20230503 22:47:28.060" endtime="20230503 22:47:28.097"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.097" endtime="20230503 22:47:28.097"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.097" endtime="20230503 22:47:28.098"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.060" endtime="20230503 22:47:28.098"></status>
+</kw>
+<kw name="${INDEX} = 34" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.128" level="INFO">${units_in_table} = 62</msg>
+<status status="PASS" starttime="20230503 22:47:28.098" endtime="20230503 22:47:28.128"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.128" endtime="20230503 22:47:28.129"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.129" endtime="20230503 22:47:28.130"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.098" endtime="20230503 22:47:28.130"></status>
+</kw>
+<kw name="${INDEX} = 35" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.165" level="INFO">${units_in_table} = 55</msg>
+<status status="PASS" starttime="20230503 22:47:28.130" endtime="20230503 22:47:28.165"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.165" endtime="20230503 22:47:28.166"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.166" endtime="20230503 22:47:28.167"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.130" endtime="20230503 22:47:28.167"></status>
+</kw>
+<kw name="${INDEX} = 36" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.198" level="INFO">${units_in_table} = 42</msg>
+<status status="PASS" starttime="20230503 22:47:28.167" endtime="20230503 22:47:28.199"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.199" endtime="20230503 22:47:28.200"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.200" endtime="20230503 22:47:28.200"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.167" endtime="20230503 22:47:28.201"></status>
+</kw>
+<kw name="${INDEX} = 37" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.232" level="INFO">${units_in_table} = 3</msg>
+<status status="PASS" starttime="20230503 22:47:28.201" endtime="20230503 22:47:28.233"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.233" endtime="20230503 22:47:28.233"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.233" endtime="20230503 22:47:28.233"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.201" endtime="20230503 22:47:28.234"></status>
+</kw>
+<kw name="${INDEX} = 38" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.270" level="INFO">${units_in_table} = 7</msg>
+<status status="PASS" starttime="20230503 22:47:28.234" endtime="20230503 22:47:28.270"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.271" endtime="20230503 22:47:28.271"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.272" endtime="20230503 22:47:28.273"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.234" endtime="20230503 22:47:28.273"></status>
+</kw>
+<kw name="${INDEX} = 39" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.308" level="INFO">${units_in_table} = 76</msg>
+<status status="PASS" starttime="20230503 22:47:28.273" endtime="20230503 22:47:28.308"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.309" endtime="20230503 22:47:28.310"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.310" endtime="20230503 22:47:28.310"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.273" endtime="20230503 22:47:28.310"></status>
+</kw>
+<kw name="${INDEX} = 40" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.347" level="INFO">${units_in_table} = 57</msg>
+<status status="PASS" starttime="20230503 22:47:28.312" endtime="20230503 22:47:28.348"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.349" endtime="20230503 22:47:28.349"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.349" endtime="20230503 22:47:28.350"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.310" endtime="20230503 22:47:28.350"></status>
+</kw>
+<kw name="${INDEX} = 41" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.402" level="INFO">${units_in_table} = 14</msg>
+<status status="PASS" starttime="20230503 22:47:28.350" endtime="20230503 22:47:28.402"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.403" endtime="20230503 22:47:28.404"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.404" endtime="20230503 22:47:28.404"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.350" endtime="20230503 22:47:28.405"></status>
+</kw>
+<kw name="${INDEX} = 42" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.466" level="INFO">${units_in_table} = 11</msg>
+<status status="PASS" starttime="20230503 22:47:28.405" endtime="20230503 22:47:28.466"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.467" endtime="20230503 22:47:28.468"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.468" endtime="20230503 22:47:28.469"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.405" endtime="20230503 22:47:28.469"></status>
+</kw>
+<kw name="${INDEX} = 43" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.511" level="INFO">${units_in_table} = 94</msg>
+<status status="PASS" starttime="20230503 22:47:28.470" endtime="20230503 22:47:28.511"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.511" endtime="20230503 22:47:28.512"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.512" endtime="20230503 22:47:28.512"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.469" endtime="20230503 22:47:28.512"></status>
+</kw>
+<kw name="${INDEX} = 44" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[5]</arg>
+</arguments>
+<assign>
+<var>${units_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.541" level="INFO">${units_in_table} = 28</msg>
+<status status="PASS" starttime="20230503 22:47:28.513" endtime="20230503 22:47:28.541"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+<arg>${units_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.542" endtime="20230503 22:47:28.542"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${UNITS}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.543" endtime="20230503 22:47:28.543"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.512" endtime="20230503 22:47:28.543"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:27.043" endtime="20230503 22:47:28.543"></status>
+</kw>
+<kw name="${INDEX} IN RANGE [ 2 | ${number_of_rows+1} ]" type="for">
+<kw name="${INDEX} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.573" level="INFO">${total_in_table} = 189.05</msg>
+<status status="PASS" starttime="20230503 22:47:28.544" endtime="20230503 22:47:28.573"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.573" endtime="20230503 22:47:28.574"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.574" endtime="20230503 22:47:28.575"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.544" endtime="20230503 22:47:28.575"></status>
+</kw>
+<kw name="${INDEX} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.610" level="INFO">${total_in_table} = 999.50</msg>
+<status status="PASS" starttime="20230503 22:47:28.576" endtime="20230503 22:47:28.610"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.610" endtime="20230503 22:47:28.611"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.611" endtime="20230503 22:47:28.611"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.576" endtime="20230503 22:47:28.611"></status>
+</kw>
+<kw name="${INDEX} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.645" level="INFO">${total_in_table} = 179.64</msg>
+<status status="PASS" starttime="20230503 22:47:28.612" endtime="20230503 22:47:28.646"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.646" endtime="20230503 22:47:28.647"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.647" endtime="20230503 22:47:28.648"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.612" endtime="20230503 22:47:28.648"></status>
+</kw>
+<kw name="${INDEX} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.679" level="INFO">${total_in_table} = 539.73</msg>
+<status status="PASS" starttime="20230503 22:47:28.648" endtime="20230503 22:47:28.679"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.679" endtime="20230503 22:47:28.680"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.680" endtime="20230503 22:47:28.680"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.648" endtime="20230503 22:47:28.681"></status>
+</kw>
+<kw name="${INDEX} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.713" level="INFO">${total_in_table} = 167.44</msg>
+<status status="PASS" starttime="20230503 22:47:28.681" endtime="20230503 22:47:28.713"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.714" endtime="20230503 22:47:28.714"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.715" endtime="20230503 22:47:28.715"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.681" endtime="20230503 22:47:28.715"></status>
+</kw>
+<kw name="${INDEX} = 7" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.751" level="INFO">${total_in_table} = 299.40</msg>
+<status status="PASS" starttime="20230503 22:47:28.716" endtime="20230503 22:47:28.751"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.752" endtime="20230503 22:47:28.752"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.753" endtime="20230503 22:47:28.753"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.716" endtime="20230503 22:47:28.754"></status>
+</kw>
+<kw name="${INDEX} = 8" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.791" level="INFO">${total_in_table} = 149.25</msg>
+<status status="PASS" starttime="20230503 22:47:28.756" endtime="20230503 22:47:28.791"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.791" endtime="20230503 22:47:28.792"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.792" endtime="20230503 22:47:28.792"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.754" endtime="20230503 22:47:28.793"></status>
+</kw>
+<kw name="${INDEX} = 9" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.830" level="INFO">${total_in_table} = 449.10</msg>
+<status status="PASS" starttime="20230503 22:47:28.793" endtime="20230503 22:47:28.830"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.830" endtime="20230503 22:47:28.831"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.831" endtime="20230503 22:47:28.831"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.793" endtime="20230503 22:47:28.831"></status>
+</kw>
+<kw name="${INDEX} = 10" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.876" level="INFO">${total_in_table} = 63.68</msg>
+<status status="PASS" starttime="20230503 22:47:28.832" endtime="20230503 22:47:28.876"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.876" endtime="20230503 22:47:28.877"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.877" endtime="20230503 22:47:28.878"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.832" endtime="20230503 22:47:28.878"></status>
+</kw>
+<kw name="${INDEX} = 11" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.920" level="INFO">${total_in_table} = 539.40</msg>
+<status status="PASS" starttime="20230503 22:47:28.878" endtime="20230503 22:47:28.920"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.921" endtime="20230503 22:47:28.921"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.921" endtime="20230503 22:47:28.921"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.878" endtime="20230503 22:47:28.923"></status>
+</kw>
+<kw name="${INDEX} = 12" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:28.964" level="INFO">${total_in_table} = 449.10</msg>
+<status status="PASS" starttime="20230503 22:47:28.923" endtime="20230503 22:47:28.964"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.964" endtime="20230503 22:47:28.965"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:28.965" endtime="20230503 22:47:28.966"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.923" endtime="20230503 22:47:28.966"></status>
+</kw>
+<kw name="${INDEX} = 13" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.006" level="INFO">${total_in_table} = 57.71</msg>
+<status status="PASS" starttime="20230503 22:47:28.966" endtime="20230503 22:47:29.006"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.006" endtime="20230503 22:47:29.007"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.007" endtime="20230503 22:47:29.007"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.966" endtime="20230503 22:47:29.007"></status>
+</kw>
+<kw name="${INDEX} = 14" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.055" level="INFO">${total_in_table} = 1,619.19</msg>
+<status status="PASS" starttime="20230503 22:47:29.008" endtime="20230503 22:47:29.055"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.055" endtime="20230503 22:47:29.055"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.056" endtime="20230503 22:47:29.056"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.007" endtime="20230503 22:47:29.056"></status>
+</kw>
+<kw name="${INDEX} = 15" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.096" level="INFO">${total_in_table} = 174.65</msg>
+<status status="PASS" starttime="20230503 22:47:29.056" endtime="20230503 22:47:29.097"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.097" endtime="20230503 22:47:29.097"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.098" endtime="20230503 22:47:29.098"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.056" endtime="20230503 22:47:29.098"></status>
+</kw>
+<kw name="${INDEX} = 16" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.134" level="INFO">${total_in_table} = 250.00</msg>
+<status status="PASS" starttime="20230503 22:47:29.099" endtime="20230503 22:47:29.135"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.136" endtime="20230503 22:47:29.137"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.137" endtime="20230503 22:47:29.138"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.098" endtime="20230503 22:47:29.139"></status>
+</kw>
+<kw name="${INDEX} = 17" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.183" level="INFO">${total_in_table} = 255.84</msg>
+<status status="PASS" starttime="20230503 22:47:29.139" endtime="20230503 22:47:29.183"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.183" endtime="20230503 22:47:29.183"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.183" endtime="20230503 22:47:29.184"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.139" endtime="20230503 22:47:29.184"></status>
+</kw>
+<kw name="${INDEX} = 18" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.223" level="INFO">${total_in_table} = 251.72</msg>
+<status status="PASS" starttime="20230503 22:47:29.184" endtime="20230503 22:47:29.223"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.223" endtime="20230503 22:47:29.224"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.224" endtime="20230503 22:47:29.225"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.184" endtime="20230503 22:47:29.225"></status>
+</kw>
+<kw name="${INDEX} = 19" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.263" level="INFO">${total_in_table} = 575.36</msg>
+<status status="PASS" starttime="20230503 22:47:29.226" endtime="20230503 22:47:29.263"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.264" endtime="20230503 22:47:29.264"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.264" endtime="20230503 22:47:29.265"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.226" endtime="20230503 22:47:29.265"></status>
+</kw>
+<kw name="${INDEX} = 20" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.305" level="INFO">${total_in_table} = 299.85</msg>
+<status status="PASS" starttime="20230503 22:47:29.265" endtime="20230503 22:47:29.305"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.305" endtime="20230503 22:47:29.306"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.306" endtime="20230503 22:47:29.306"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.265" endtime="20230503 22:47:29.306"></status>
+</kw>
+<kw name="${INDEX} = 21" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.343" level="INFO">${total_in_table} = 479.04</msg>
+<status status="PASS" starttime="20230503 22:47:29.306" endtime="20230503 22:47:29.343"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.344" endtime="20230503 22:47:29.344"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.344" endtime="20230503 22:47:29.344"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.306" endtime="20230503 22:47:29.345"></status>
+</kw>
+<kw name="${INDEX} = 22" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.385" level="INFO">${total_in_table} = 86.43</msg>
+<status status="PASS" starttime="20230503 22:47:29.345" endtime="20230503 22:47:29.385"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.386" endtime="20230503 22:47:29.387"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.387" endtime="20230503 22:47:29.388"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.345" endtime="20230503 22:47:29.388"></status>
+</kw>
+<kw name="${INDEX} = 23" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.430" level="INFO">${total_in_table} = 1,183.26</msg>
+<status status="PASS" starttime="20230503 22:47:29.388" endtime="20230503 22:47:29.430"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.431" endtime="20230503 22:47:29.431"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.431" endtime="20230503 22:47:29.431"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.388" endtime="20230503 22:47:29.432"></status>
+</kw>
+<kw name="${INDEX} = 24" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.473" level="INFO">${total_in_table} = 413.54</msg>
+<status status="PASS" starttime="20230503 22:47:29.432" endtime="20230503 22:47:29.474"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.474" endtime="20230503 22:47:29.474"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.474" endtime="20230503 22:47:29.474"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.432" endtime="20230503 22:47:29.475"></status>
+</kw>
+<kw name="${INDEX} = 25" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.515" level="INFO">${total_in_table} = 1,305.00</msg>
+<status status="PASS" starttime="20230503 22:47:29.475" endtime="20230503 22:47:29.515"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.515" endtime="20230503 22:47:29.516"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.516" endtime="20230503 22:47:29.516"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.475" endtime="20230503 22:47:29.516"></status>
+</kw>
+<kw name="${INDEX} = 26" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.552" level="INFO">${total_in_table} = 19.96</msg>
+<status status="PASS" starttime="20230503 22:47:29.517" endtime="20230503 22:47:29.553"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.553" endtime="20230503 22:47:29.553"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.554" endtime="20230503 22:47:29.554"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.517" endtime="20230503 22:47:29.554"></status>
+</kw>
+<kw name="${INDEX} = 27" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.596" level="INFO">${total_in_table} = 139.93</msg>
+<status status="PASS" starttime="20230503 22:47:29.555" endtime="20230503 22:47:29.596"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.597" endtime="20230503 22:47:29.597"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.597" endtime="20230503 22:47:29.598"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.555" endtime="20230503 22:47:29.598"></status>
+</kw>
+<kw name="${INDEX} = 28" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.639" level="INFO">${total_in_table} = 249.50</msg>
+<status status="PASS" starttime="20230503 22:47:29.598" endtime="20230503 22:47:29.639"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.639" endtime="20230503 22:47:29.639"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.640" endtime="20230503 22:47:29.640"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.598" endtime="20230503 22:47:29.640"></status>
+</kw>
+<kw name="${INDEX} = 29" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.683" level="INFO">${total_in_table} = 131.34</msg>
+<status status="PASS" starttime="20230503 22:47:29.640" endtime="20230503 22:47:29.683"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.683" endtime="20230503 22:47:29.683"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.684" endtime="20230503 22:47:29.684"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.640" endtime="20230503 22:47:29.684"></status>
+</kw>
+<kw name="${INDEX} = 30" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.719" level="INFO">${total_in_table} = 479.04</msg>
+<status status="PASS" starttime="20230503 22:47:29.684" endtime="20230503 22:47:29.719"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.720" endtime="20230503 22:47:29.720"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.721" endtime="20230503 22:47:29.721"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.684" endtime="20230503 22:47:29.721"></status>
+</kw>
+<kw name="${INDEX} = 31" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.761" level="INFO">${total_in_table} = 68.37</msg>
+<status status="PASS" starttime="20230503 22:47:29.722" endtime="20230503 22:47:29.761"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.761" endtime="20230503 22:47:29.762"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.762" endtime="20230503 22:47:29.763"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.721" endtime="20230503 22:47:29.763"></status>
+</kw>
+<kw name="${INDEX} = 32" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.802" level="INFO">${total_in_table} = 719.20</msg>
+<status status="PASS" starttime="20230503 22:47:29.763" endtime="20230503 22:47:29.802"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.803" endtime="20230503 22:47:29.803"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.804" endtime="20230503 22:47:29.804"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.763" endtime="20230503 22:47:29.804"></status>
+</kw>
+<kw name="${INDEX} = 33" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.839" level="INFO">${total_in_table} = 625.00</msg>
+<status status="PASS" starttime="20230503 22:47:29.805" endtime="20230503 22:47:29.839"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.840" endtime="20230503 22:47:29.840"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.840" endtime="20230503 22:47:29.842"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.805" endtime="20230503 22:47:29.842"></status>
+</kw>
+<kw name="${INDEX} = 34" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.886" level="INFO">${total_in_table} = 309.38</msg>
+<status status="PASS" starttime="20230503 22:47:29.842" endtime="20230503 22:47:29.886"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.887" endtime="20230503 22:47:29.887"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.888" endtime="20230503 22:47:29.888"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.842" endtime="20230503 22:47:29.889"></status>
+</kw>
+<kw name="${INDEX} = 35" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.933" level="INFO">${total_in_table} = 686.95</msg>
+<status status="PASS" starttime="20230503 22:47:29.889" endtime="20230503 22:47:29.933"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.934" endtime="20230503 22:47:29.934"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.935" endtime="20230503 22:47:29.935"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.889" endtime="20230503 22:47:29.935"></status>
+</kw>
+<kw name="${INDEX} = 36" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:29.984" level="INFO">${total_in_table} = 1,005.90</msg>
+<status status="PASS" starttime="20230503 22:47:29.937" endtime="20230503 22:47:29.984"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.984" endtime="20230503 22:47:29.985"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:29.986" endtime="20230503 22:47:29.987"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.937" endtime="20230503 22:47:29.987"></status>
+</kw>
+<kw name="${INDEX} = 37" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.029" level="INFO">${total_in_table} = 825.00</msg>
+<status status="PASS" starttime="20230503 22:47:29.988" endtime="20230503 22:47:30.029"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.030" endtime="20230503 22:47:30.030"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.031" endtime="20230503 22:47:30.031"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:29.988" endtime="20230503 22:47:30.032"></status>
+</kw>
+<kw name="${INDEX} = 38" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.073" level="INFO">${total_in_table} = 9.03</msg>
+<status status="PASS" starttime="20230503 22:47:30.033" endtime="20230503 22:47:30.073"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.073" endtime="20230503 22:47:30.073"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.074" endtime="20230503 22:47:30.074"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.032" endtime="20230503 22:47:30.074"></status>
+</kw>
+<kw name="${INDEX} = 39" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.115" level="INFO">${total_in_table} = 151.24</msg>
+<status status="PASS" starttime="20230503 22:47:30.074" endtime="20230503 22:47:30.115"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.115" endtime="20230503 22:47:30.116"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.116" endtime="20230503 22:47:30.116"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.074" endtime="20230503 22:47:30.116"></status>
+</kw>
+<kw name="${INDEX} = 40" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.156" level="INFO">${total_in_table} = 1,139.43</msg>
+<status status="PASS" starttime="20230503 22:47:30.117" endtime="20230503 22:47:30.156"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.157" endtime="20230503 22:47:30.157"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.157" endtime="20230503 22:47:30.158"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.117" endtime="20230503 22:47:30.158"></status>
+</kw>
+<kw name="${INDEX} = 41" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.196" level="INFO">${total_in_table} = 18.06</msg>
+<status status="PASS" starttime="20230503 22:47:30.159" endtime="20230503 22:47:30.197"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.197" endtime="20230503 22:47:30.198"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.198" endtime="20230503 22:47:30.198"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.158" endtime="20230503 22:47:30.199"></status>
+</kw>
+<kw name="${INDEX} = 42" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.238" level="INFO">${total_in_table} = 54.89</msg>
+<status status="PASS" starttime="20230503 22:47:30.199" endtime="20230503 22:47:30.238"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.239" endtime="20230503 22:47:30.239"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.240" endtime="20230503 22:47:30.240"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.199" endtime="20230503 22:47:30.241"></status>
+</kw>
+<kw name="${INDEX} = 43" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.284" level="INFO">${total_in_table} = 1,879.06</msg>
+<status status="PASS" starttime="20230503 22:47:30.242" endtime="20230503 22:47:30.284"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.285" endtime="20230503 22:47:30.286"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.286" endtime="20230503 22:47:30.287"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.241" endtime="20230503 22:47:30.287"></status>
+</kw>
+<kw name="${INDEX} = 44" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://table[14]/tbody/tr[${INDEX}]/td[7]</arg>
+</arguments>
+<assign>
+<var>${total_in_table}</var>
+</assign>
+<msg timestamp="20230503 22:47:30.331" level="INFO">${total_in_table} = 139.72</msg>
+<status status="PASS" starttime="20230503 22:47:30.288" endtime="20230503 22:47:30.331"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+<arg>${total_in_table}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.332" endtime="20230503 22:47:30.332"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${TOTAL}</arg>
+</arguments>
+<status status="PASS" starttime="20230503 22:47:30.333" endtime="20230503 22:47:30.333"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:30.287" endtime="20230503 22:47:30.334"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:28.544" endtime="20230503 22:47:30.334"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230503 22:47:30.334" endtime="20230503 22:47:32.562"></status>
+</kw>
+<status status="PASS" starttime="20230503 22:47:19.817" endtime="20230503 22:47:32.563" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230503 22:47:19.615" endtime="20230503 22:47:32.564"></status>
+</suite>
+<status status="PASS" starttime="20230503 22:47:19.612" endtime="20230503 22:47:32.567"></status>
+</suite>
+<status status="PASS" starttime="20230503 22:47:19.593" endtime="20230503 22:47:32.569"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Kineti Assesement">Kineti Assesement</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Test">Kineti Assesement.Test</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Different Items">Kineti Assesement.Test.Different Items</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
